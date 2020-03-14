@@ -3,7 +3,7 @@ Openclassrooms-AIC
 
 This repository host the python files for the project number 6 of the AIC training by Openclassrooms.
 
-This files will allow administrators to prepare computers for the linux training :
+This files will allow administrators to prepare computers for the linux training of project number 3 :
 
 - update/upgrade OS
 - creation of specific users
