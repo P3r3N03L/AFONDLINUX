@@ -15,7 +15,7 @@ std_path = "/home/student"
 adminf_path = "/home/admininfra"
 
 ##The webhook URL for Slack
-web_hook_url = 'https://hooks.slack.com/services/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'
+web_hook_url = '<MYWEBHOOKURL>'
 
 ##Get the hostname and the IP of the targeted computer
 hostname = socket.gethostname()    
