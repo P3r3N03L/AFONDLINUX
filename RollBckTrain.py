@@ -9,7 +9,7 @@ import socket
 import boto3
 
 ##Specify the webhook uRL
-web_hook_url = 'https://hooks.slack.com/services/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'
+web_hook_url = '<MYWEBHOOKURL>'
 
 ##Get the hostname and the IP of the targeted computer
 hostname = socket.gethostname()    
