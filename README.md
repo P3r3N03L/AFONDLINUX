@@ -12,10 +12,7 @@ These files will allow administrators to launch automated workstation preparatio
 
 The scripts will also send notifications at each step to the slack channel of Myenterprise.
 
-
-
-
-Prerequisite :
+Prerequisites :
 
 - Ubuntu 18.04
 - AWS client
