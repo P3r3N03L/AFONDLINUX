@@ -1,7 +1,7 @@
-# MYENTERPRISE
+# AFONDLINUX
 LINUX TRAINING
 
-This repository host the python files for the Linux training of Myenterprise.
+This repository host the python files for the Linux training of AFONDLINUX organization.
 
 These files will allow administrators to launch automated workstation preparation scripts, including :
 
