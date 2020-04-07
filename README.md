@@ -15,7 +15,7 @@ The scripts will also send notifications at each step to the slack channel of My
 Prerequisites :
 
 - Ubuntu 18.04
-- AWS client
+- AWS client 1.14.44
 - Boto3
 - Python 3.6.9
 - Credentials for AWS S3 and Slack
