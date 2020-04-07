@@ -47,7 +47,7 @@ def upgrade() :
         os.system('sudo apt-get -y upgrade')
         requests.post(web_hook_url,data=json.dumps(slack_msg_upg_ok))
     elif os.path.exists(upd_path) and os.path.getsize(upd_path) == 0:
-        print ("Any updates available")
+        print ("No updates available")
         requests.post(web_hook_url,data=json.dumps(slack_msg_no_upd))
     else :
         print ("Error, upd.txt file not found")
@@ -89,7 +89,7 @@ def chge_hstnme() :
 
 chge_hstnme()
 
-print ("The workstation will now rebbot for applying changes")
+print ("The workstation will reboot now for applying changes")
 requests.post(web_hook_url,data=json.dumps(slack_msg_reboot))
 os.system('reboot')
 
