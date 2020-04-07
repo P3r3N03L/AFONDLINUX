@@ -43,14 +43,14 @@ chkupdate()
 ##Upgrade function, make the upgrade if the upd.txt exist and is larger than 0
 def upgrade() :
     if os.path.exists(upd_path) and os.path.getsize(upd_path) > 0 :
-        print ("Mises à jour disponibles, lancement de l'installation")
+        print ("Updates available, starting upgrade now")
         os.system('sudo apt-get -y upgrade')
         requests.post(web_hook_url,data=json.dumps(slack_msg_upg_ok))
     elif os.path.exists(upd_path) and os.path.getsize(upd_path) == 0:
-        print ("Aucune mise à jour en attente")
+        print ("Any updates available")
         requests.post(web_hook_url,data=json.dumps(slack_msg_no_upd))
     else :
-        print ("Erreur : fichier upd.txt non trouvé")
+        print ("Error, upd.txt file not found")
         requests.post(web_hook_url,data=json.dumps(slack_msg_no_upd_file))
 
 upgrade()
@@ -58,15 +58,15 @@ upgrade()
 ##Creation of users function, create admininfra and student credentials and folders
 def cr_users() :
     if os.path.exists(std_path) and os.path.exists(adminf_path) :
-        print ("Utilisateurs déjà présents")
+        print ("Users already set")
         requests.post(web_hook_url,data=json.dumps(slack_msg_cr_users_ko))
     else :    
-        print ("Création de l'utilisateur admininfra")
+        print ("Creation of the Admininfra user and repository")
         os.system('sudo useradd -m -p $(openssl passwd -1 sprvsr) admininfra')
         os.system('sudo usermod -a -G sudo admininfra')
         os.system('sudo mkdir /home/admininfra/perso')
         os.system('sudo mkdir /home/admininfra/save')
-        print ("Création de l'utilisateur Student")
+        print ("Creation of the Student user and repository")
         os.system('sudo useradd -m -p $(openssl passwd -1 aflstud) student')
         os.system('sudo mkdir /home/student/perso')
         os.system('sudo mkdir /home/student/save')
@@ -76,10 +76,10 @@ cr_users()
 
 ##Change hostname function
 def chge_hstnme() :
-    print ("Sauvegarde du fichier host et du hostname")
+    print ("Saving hostname files")
     os.system('sudo cp /etc/hosts /home/hosts-old')
     os.system('sudo cp /etc/hostname /home/hostname-old')
-    print ("changement du hostname")
+    print ("Changing hostname")
     num = str(random.randint(1,100))
     prefix = ("AFL1DSK")
     new_hostname = (prefix + num)
@@ -89,7 +89,7 @@ def chge_hstnme() :
 
 chge_hstnme()
 
-print ("Le poste va redémarrer pour appliquer les changements")
+print ("The workstation will now rebbot for applying changes")
 requests.post(web_hook_url,data=json.dumps(slack_msg_reboot))
 os.system('reboot')
 
