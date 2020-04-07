@@ -17,6 +17,6 @@ Prerequisites :
 - Ubuntu 18.04
 - AWS client
 - Boto3
-- Python 3
+- Python 3.6.9
 - Credentials for AWS S3 and Slack
 
