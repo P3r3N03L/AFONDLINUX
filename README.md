@@ -10,7 +10,7 @@ These files will allow administrators to launch automated workstation preparatio
 - change of the hostname
 - roll back with a save of the personnal folders to an AWS S3 bucket 
 
-The scripts will also send notifications at each step to the slack channel of Myenterprise.
+The scripts will also send notifications at each step to the slack channel of AFONDLINUX.
 
 Prerequisites :
 
