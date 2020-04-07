@@ -5,12 +5,12 @@ This repository host the python files for the Linux training of AFONDLINUX organ
 
 These files will allow administrators to launch automated workstation preparation scripts, including :
 
-- update/upgrade OS
-- creation of specific users
-- change of the hostname
-- roll back with a save of the personnal folders to an AWS S3 bucket 
+- update/upgrade OS (PrepTrain.py)
+- creation of specific users (PrepTrain.py)
+- change of the hostname (PrepTrain.py)
+- roll back with a save of the personnal folders to an AWS S3 bucket (RollBckTrain.py)
 
-The scripts will also send notifications at each step to the slack channel of AFONDLINUX.
+The scripts will also send notifications at each step to the slack channel of AFONDLINUX (PrepTrain.py and RollBckTrain.py).
 
 Prerequisites :
 
