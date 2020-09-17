@@ -1,5 +1,5 @@
 # AFONDLINUX
-LINUX TRAINING
+LINUX TRAINING - SYSTEM PART
 
 This repository host the python files for the Linux training of AFONDLINUX organization.
 
