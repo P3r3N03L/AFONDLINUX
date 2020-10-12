@@ -1,6 +1,6 @@
 # coding: utf-8
 
-####Created by Yannick MARTIN - yannickim@hotmail.com
+####Created by Yannick MARTIN
 ####Last Modification : 07/04/2020
 
 
